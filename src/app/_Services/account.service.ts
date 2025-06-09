@@ -4,7 +4,6 @@ import { BehaviorSubject, Observable, map } from 'rxjs';
 import { UserModel } from '../_Models/UserModel';
 import { PresenceService } from './presence.service';
 import { environment } from 'src/environments/environment';
-import { SimpleHubService } from './simple-hub.service';
 
 
 
@@ -17,7 +16,7 @@ export class AccountService {
   private BaseUrl = environment.ApiUrl
 
 
-  constructor(private http: HttpClient,private presenceService:PresenceService,private simpleHubService:SimpleHubService) { }
+  constructor(private http: HttpClient,private presenceService:PresenceService) { }
 
 
   LogIn(model: any) {
@@ -60,7 +59,7 @@ export class AccountService {
     localStorage.setItem("user", JSON.stringify(user))
 
     this.presenceService.createHubConnection(user)
-    this.simpleHubService.createHubConnection()
+   
 
   }
 
