@@ -1,5 +1,5 @@
 export const environment = {
-    production:true,
-    ApiUrl: "https://app-datingapp-api-cc-dev-001.azurewebsites.net/api/",
-    hubUrl: "https://app-datingapp-api-cc-dev-001.azurewebsites.net/hubs/",
+    production: true,
+    ApiUrl: "https://datingapp-dev-01-cc.azurewebsites.net/api/",
+    hubUrl: "https://datingapp-dev-01-cc.azurewebsites.net/hubs/",
 };
